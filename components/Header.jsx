@@ -11,11 +11,11 @@ export default function Header() {
         height={ 80 }
       />
 
-      <div className='text-lg font-bold'>
-        <Link href='/'>
+      <Link href='/'>
+        <a className='text-lg font-bold'>
           HOME
-        </Link>
-      </div>
+        </a>
+      </Link>
     </header>
   );
 }
