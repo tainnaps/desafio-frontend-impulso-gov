@@ -22281,5 +22281,4 @@ const data = [
   }
 ];
 
-
 export { data };
