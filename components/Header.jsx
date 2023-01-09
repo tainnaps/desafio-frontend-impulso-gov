@@ -19,7 +19,7 @@ export default function Header({ onLogoClick }) {
 
       <Link href='/'>
         <a
-          className='text-lg font-bold hover:text-dark-gray transition
+          className='text-lg font-bold font-display hover:text-gray-3 transition
           duration-150 ease-in-out'
         >
           HOME
