@@ -57,6 +57,7 @@ export default function Modal({ onCloseBtnClick }) {
             items-center justify-center self-end hover:text-gray-2 transition
             duration-150 ease-in-out'
           onClick={ onCloseBtnClick }
+          data-testid='modal-close-btn'
         >
           <MdOutlineClose />
         </button>
