@@ -1,17 +1,16 @@
-// import 'react-datalist-input/dist/styles.css';
-// import DataListInput from 'react-datalist-input';
 import Footer from '../components/Footer';
 import Head from 'next/head';
 import Header from '../components/Header';
 import { InfoTab } from '@impulsogov/design-system';
-// import { data } from '../municipios';
-// import { v1 as generateUUID } from 'uuid';
+import Modal from '../components/Modal';
+import { useState } from 'react';
 
 export default function Home() {
-  // const getDataListItems = () => data.map(({ nome, uf }) => ({
-  //   id: generateUUID(),
-  //   value: `${nome}, ${uf}`
-  // }));
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <>
@@ -22,7 +21,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <Header onLogoClick={openModal} />
 
       <main className='w-full'>
 
@@ -39,7 +38,7 @@ export default function Home() {
                 Impulso em parceria com o Instituto Cactus e o município de 
                 Aracaju (SE).
               `,
-              rightTitle: 'O que é a plataforma de indicadoresdeSaúde Mental?'
+              rightTitle: 'O que é a plataforma de indicadores de Saúde Mental?'
             },
             {
               buttonLink: '/',
@@ -56,13 +55,7 @@ export default function Home() {
           ] }
         />
 
-        {/* <DataListInput
-          label="Escolha um município"
-          placeholder="Porto Alegre, RS"
-          items={getDataListItems()}
-          onSelect={(item) => console.log(item.value)}
-        /> */}
-
+        {isModalOpen && <Modal onCloseBtnClick={closeModal} />}
       </main>
 
       <Footer />
