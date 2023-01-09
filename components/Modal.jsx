@@ -1,6 +1,7 @@
 // import 'react-datalist-input/dist/styles.css';
 import DataListInput, { useComboboxControls } from 'react-datalist-input';
 import { getStorageItem, setStorageItem } from '../utils/localStorage';
+import DataListItem from './DataListItem';
 import { MdOutlineClose } from 'react-icons/md';
 import PropTypes from 'prop-types';
 import { data } from '../data/cities';
@@ -31,10 +32,17 @@ export default function Modal({ onCloseBtnClick }) {
     setStorageItem(STORAGE_KEY, city);
   };
 
-  const getDataListItems = () => data.map(({ nome, uf }) => ({
+  const getDataListItems = () => data.map(({ nome, uf }) => {
+    const item = {
     id: generateUUID(),
     value: `${nome}, ${uf}`
-  }));
+    };
+
+    return {
+      ...item,
+      node: <DataListItem item={item} />,
+    };
+  });
 
   return (
     <div
