@@ -49,8 +49,8 @@ export default function Modal({ onCloseBtnClick }) {
         duration-150 ease-in-out'
     >
       <div
-        className='w-5/12 min-h-screen flex flex-col gap-y-24 px-14 py-8
-          fade fixed top-0 right-0 bg-white'
+        className='w-full md:w-6/12 lg:w-5/12 min-h-screen flex flex-col
+          gap-y-24 pl-14 pr-6 py-6 fade fixed top-0 right-0 bg-white'
       >
         <button
           className='w-14 h-14 bg-black rounded-full p-4 text-white text-xl flex
@@ -61,27 +61,26 @@ export default function Modal({ onCloseBtnClick }) {
           <MdOutlineClose />
         </button>
 
-        <div className='w-6/12'>
-          <DataListInput
-            value={dataListValue}
-            setValue={setDataListValue}
-            label="Escolha um município"
-            placeholder="Porto Alegre, RS"
-            items={getDataListItems()}
-            onSelect={(item) => saveCityInStorage(item.value)}
-            className='font-display text-lg tracking-wide'
-            labelProps={{
-              className: 'px-2'
-            }}
-            inputProps={{
-              className: 'text-3xl p-2 rounded-3xl mt-1 mb-2'
-            }}
-            listboxOptionProps={{
-              className: `w-fit py-1 px-4  mb-1 text-gray-1 rounded-3xl border-2
-              border-gray-3 hover:bg-gray-3 focus:bg-gray-3 cursor-pointer`
-            }}
-          />
-        </div>
+        <DataListInput
+          value={dataListValue}
+          setValue={setDataListValue}
+          label="Escolha um município"
+          placeholder="Porto Alegre, RS"
+          items={getDataListItems()}
+          onSelect={(item) => saveCityInStorage(item.value)}
+          className='w-full font-display text-md lg:text-lg tracking-wide'
+          labelProps={{
+            className: 'px-2'
+          }}
+          inputProps={{
+            className: 'w-full text-2xl lg:text-3xl p-2 rounded-3xl mt-1 mb-2'
+          }}
+          listboxOptionProps={{
+            className: `w-fit py-1 px-4 mb-1 text-md lg:text-lg text-gray-1
+            rounded-3xl border-2 border-gray-3 hover:bg-gray-3 focus:bg-gray-3
+            cursor-pointer`
+          }}
+        />
       </div>
     </div>
   );

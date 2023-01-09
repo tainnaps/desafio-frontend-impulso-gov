@@ -16,6 +16,11 @@ module.exports = {
     fontFamily: {
       display: ['Inter', 'sans-serif'],
     },
+    screens: {
+      'lg': '910px',
+      'md':	'768px',
+      'sm':	'640px'
+    }
   },
   plugins: [],
 };
