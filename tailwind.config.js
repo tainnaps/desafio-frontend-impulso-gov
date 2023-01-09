@@ -12,10 +12,12 @@ module.exports = {
     },
     colors: {
       'blue': '#00BCD4',
-      'black': '#000000',
+      'black': '#1F1F1F',
       'white': '#FFFFFF',
-      'dark-gray': '#363636'
-    }
+      'gray-1': '#606E78',
+      'gray-2': '#A6B5BE',
+      'gray-3': '#EFF5F9',
+    },
   },
   plugins: [],
 };
