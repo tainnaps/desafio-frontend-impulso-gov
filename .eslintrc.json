@@ -9,6 +9,7 @@
     "sort-imports": "error",
     "no-trailing-spaces": "error",
     "indent": ["error", 2],
-    "max-len": ["error", { "code": 80 }]
+    "max-len": ["error", { "code": 80 }],
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }]
   }
 }
