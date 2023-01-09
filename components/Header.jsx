@@ -12,7 +12,10 @@ export default function Header() {
       />
 
       <Link href='/'>
-        <a className='text-lg font-bold'>
+        <a
+          className='text-lg font-bold hover:text-dark-gray transition
+          duration-150 ease-in-out'
+        >
           HOME
         </a>
       </Link>
