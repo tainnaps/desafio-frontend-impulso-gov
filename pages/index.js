@@ -24,7 +24,6 @@ export default function Home() {
       <Header onLogoClick={openModal} />
 
       <main className='w-full'>
-
         <InfoTab
           contentList={ [
             {
