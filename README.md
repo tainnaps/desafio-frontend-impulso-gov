@@ -14,7 +14,7 @@ A estrutura de diretórios do repositório é a seguinte:
 
 ```
 root
-├─ \_\_tests\_\_
+├─ __tests__
 ├─ components
 ├─ data
 ├─ pages
