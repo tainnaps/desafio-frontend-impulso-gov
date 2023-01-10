@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Desafio Frontend - Impulso Gov
 
-## Getting Started
+Este repositório contém a resolução do Desafio Frontend do processo seletivo da empresa **Impulso Gov**.
 
-First, run the development server:
+Para solucionar o desafio, foi desenvolvida uma aplicação Web, utilizando `NextJS`, a partir de um protótipo do Figma e consumindo componentes do [Design System](https://www.npmjs.com/package/@impulsogov/design-system) da empresa.
 
-```bash
-npm run dev
-# or
-yarn dev
+> O conteúdo do arquivo `cities.js` foi disponibilizado pela **Impulso Gov** para a realização do desafio.
+
+## Sumário
+
+## Estrutura do repositório
+
+A estrutura de diretórios do repositório é a seguinte:
+
+root
+├─ \_\_tests\_\_
+├─ components
+├─ data
+├─ pages
+├─ public
+├─ styles
+├─ utils
+
+- \_\_tests\_\_: testes da aplicação
+- components: componentes construídos para reutilização na aplicação
+- data: dados não sensíveis usados na aplicação
+- pages: páginas da aplicação
+- public: imagens não sensíveis usadas na aplicação
+- styles: arquivos de estilização da aplicação
+- utils: funções auxiliares da aplicação
+
+## Tecnologias
+
+As tecnologias utilizadas para desenvolver a aplicação foram:
+
+- `NextJS`: construção da aplicação
+- `Tailwind CSS`: estilização da aplicação
+- `Jest e React Testing Library`: criação de testes
+
+## Executando a aplicação
+
+Siga os passos abaixo para executar a aplicação:
+
+1 - Clone este repositório
+
+``` bash
+git clone https://github.com/tainnaps/desafio-frontend-impulso-gov.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2 - Entre no diretório raiz do repositório clonado
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+``` bash
+cd desafio-frontend-impulso-gov
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+3 - **Dentro do diretório raiz (onde se encontra o arquivo `package.json`)**, instale as dependências
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+``` bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3 - **Ainda no diretório raiz**, execute a aplicação em produção ou desenvolvimento
 
-## Learn More
+``` bash
+# Produção
+npm run build && npm start
 
-To learn more about Next.js, take a look at the following resources:
+# Desenvolvimento
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4 - Acesse a aplicação inserindo a *url* abaixo em seu navegador web
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+``` bash
+http://localhost:3000
+```
 
-## Deploy on Vercel
+⚠️ Caso a porta 3000 da sua máquina já esteja em uso, o `NextJS` alocará outra porta para a aplicação. Caso isso aconteça, insira no navegador a *url* que é disponibilizada no terminal após executar o **passo 3** desta seção.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Executando os testes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Foram desenvolvidos testes unitários para os componentes da aplicação usando `jest` e `React Testing Library`.
+
+Para executar os testes, use o seguinte comando **dentro do diretório raiz (onde se encontra o arquivo `package.json`)**:
+
+``` bash
+npm test
+```
+
+Caso prefira executar um arquivo de teste por vez, basta passar o caminho para o arquivo que deseja, da seguinte forma (**lembre-se de estar dentro do diretório raiz**):
+
+``` bash
+npm test __tests__/nomeDoArquivo.test.jsx
+```
