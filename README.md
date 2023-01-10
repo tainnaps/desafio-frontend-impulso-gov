@@ -12,6 +12,7 @@ Para solucionar o desafio, foi desenvolvida uma aplicação Web, utilizando `Nex
 
 A estrutura de diretórios do repositório é a seguinte:
 
+```
 root
 ├─ \_\_tests\_\_
 ├─ components
@@ -20,6 +21,7 @@ root
 ├─ public
 ├─ styles
 ├─ utils
+```
 
 - \_\_tests\_\_: testes da aplicação
 - components: componentes construídos para reutilização na aplicação
